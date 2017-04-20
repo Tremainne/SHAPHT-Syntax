@@ -1,0 +1,54 @@
+{ "name": "SHAPHT",
+  "scopeName": "source.shapht",
+  "fileTypes": ["shapht"],
+  "patterns": [
+    {
+        "name": "storage.modifier.shapht",
+        "match": "\\.\\b(align|ascii|asciiz|byte|double|extern|float|globl|space|word)\\b",
+        "comment": "Assembler directives for data storage"
+    },
+    {
+        "name": "entity.name.section.shapht",
+        "match": "\\.\\b(data|text|kdata|ktext|)\\b",
+        "comment": "Segements: .data .text"
+    },
+    {
+        "name": "variable.parameter.shapht",
+        "match": "\\$(((3[01])|([12]?[0-9])|[0-9])|t[0-15]|ra|pc|c)",
+        "comment": "Registers by id $t0, $t1, ..."
+    },
+    {
+        "name": "support.function.source.shapht",
+        "match": "\\b(add|sub|sll|sra|xor|or|cpi|cpo|addi|not|and|slli|srli|lb|sb|halt|beq|blt|jr)\\b",
+        "comment": "Just the hardcoded instructions provided by the SHAPHT assembly language"
+    },
+    {
+        "name": "entity.name.function.shapht",
+        "match": "\\b(syscall)\\b",
+        "comment": "Other"
+    },
+    {
+        "name": "string.quoted.double.shapht",
+        "begin": "\"",
+        "patterns": [{"match": ".", "name": "string.ssraw"}],
+        "end": "\"",
+        "comment": "Strings"
+    },
+    {
+        "name": "constant.numeric.shapht",
+        "match": "\\b((0(x|X)[0-9A-Fa-f]*)|((\\-)?[0-9]*))\\b",
+        "comment": "Numbers like +12, -3, 55, 0x3F"
+    },
+    {
+        "name": "entity.name.tag.shapht",
+        "match": "\\b[\\w]+\\b:",
+        "comment": "Labels at line start: begin_repeat: add ..."
+    },
+    {
+        "name": "comment.line.number-sign.shapht",
+        "match": "#.*$",
+        "comment": "Single line comments"
+    }
+  ],
+  "uuid": ""
+}

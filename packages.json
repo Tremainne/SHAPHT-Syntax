@@ -1,0 +1,20 @@
+{
+	"schema_version": "1.0",
+	"packages": [
+		{
+			"name": "SHAPHT-Syntax",
+			"description": "Provides SHAPHT-Syntax for Sublime Text 3. Currently under development",
+			"author": "David Thomson",
+			"homepage": "https://github.com/tremainne/SHAPHT-Syntax",
+			"last_modified": "2017-04-20 08:34:24",
+			"platforms": {
+				"*": [
+					{
+						"version": "0.1.0",
+						"url": "https://nodeload.github.com/tremainne/shapht-syntax/zip/0.1"
+					}
+				]
+			}
+		}
+	]
+}
